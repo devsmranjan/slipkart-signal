@@ -1,0 +1,12 @@
+.nav {
+    padding: 1.2rem 3rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eee;
+}
+
+.nav__cart-value {
+    font-size: 2rem;
+}
