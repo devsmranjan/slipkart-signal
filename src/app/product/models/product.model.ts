@@ -26,3 +26,7 @@ export type TProduct = {
     rating: number
     thumbnail: string
 }
+
+export type TProductResponse = {
+    products: TProduct[]
+}

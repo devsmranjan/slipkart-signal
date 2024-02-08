@@ -1,3 +1,5 @@
-<slipkart-product-card/>
-<slipkart-product-card/>
-<slipkart-product-card/>
+@if (productListStore.products()?.products; as products) {
+    @for (product of products; track product.id) {
+        <slipkart-product-card/>
+    }
+}

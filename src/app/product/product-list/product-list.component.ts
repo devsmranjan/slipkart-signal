@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from '../product-card/product-card.component';
+import { ProductStore } from '../product.store';
 
 @Component({
   selector: 'slipkart-product-list',
@@ -10,4 +11,10 @@ import { ProductCardComponent } from '../product-card/product-card.component';
   styleUrl: './product-list.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductListComponent {}
+export class ProductListComponent implements OnInit {
+  productListStore = inject(ProductStore)
+
+  ngOnInit(): void {
+      this.productListStore.loadProducts()
+  }
+}
