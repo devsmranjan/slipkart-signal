@@ -8,6 +8,6 @@ export const appRoutes: Route[] = [
     },
     {
         path: 'products',
-        loadComponent: () => import("./product-list/product-list.component").then(c => c.ProductListComponent)
+        loadComponent: () => import("./product/product.component").then(c => c.ProductComponent)
     }
 ];
