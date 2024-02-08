@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { ProductStore } from '../product.store';
 
 @Component({
   selector: 'slipkart-product-header',
@@ -9,4 +11,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './product-header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductHeaderComponent {}
+export class ProductHeaderComponent {
+  productListStore = inject(ProductStore)
+
+  refreshProducts() {
+    this.productListStore.loadProducts()
+  }
+}
