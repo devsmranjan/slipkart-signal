@@ -1,1 +1,6 @@
-<p>product-card works!</p>
+<div class="product-card">
+    <img [src]="product.thumbnail" [alt]="product.title" class="product-card__thumbnail">
+    <h3 class="product-card__title">{{product.title}}</h3>
+    <p class="product-card__description">{{product.description}}</p>
+    <p class="product-card__price">₹ {{product.price}}</p>
+</div>

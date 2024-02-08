@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TProduct } from '../models/product.model';
 
 @Component({
   selector: 'slipkart-product-card',
@@ -9,4 +10,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './product-card.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductCardComponent {}
+export class ProductCardComponent {
+  @Input({required: true}) product!: TProduct
+}
