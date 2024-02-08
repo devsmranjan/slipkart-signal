@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductHeaderComponent } from './product-header/product-header.component';
-
 @Component({
   selector: 'slipkart-product',
   standalone: true,
